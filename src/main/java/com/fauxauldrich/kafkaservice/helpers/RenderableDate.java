@@ -23,11 +23,11 @@ public class RenderableDate {
     @Override
     public String toString() {
         if (format != null) {
-            if (format.equals("epoch")) {
+            if ("epoch".equals(format)) {
                 return String.valueOf(date.getTime());
             }
 
-            if (format.equals("unix")) {
+            if ("unix".equals(format)) {
                 return String.valueOf(date.getTime() / DIVIDE_MILLISECONDS_TO_SECONDS);
             }
 
